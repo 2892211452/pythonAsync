@@ -73,22 +73,22 @@ select * from dm where title  like '%name%';
 
 
 if __name__ =="__main__":
-    # for i in range(1, 7266):
-    #     try:
-    #         output = open(FileDir+'/dm/data'+str(i) +'.pkl', 'rb')
+    for i in range(1, 7266):
+        try:
+            output = open(FileDir+'/dm/data'+str(i) +'.pkl', 'rb')
 
 
-    #         data=pickle.load(output)
-    #         src = str(data['video'])
-    #         title = data['name']
-    #         url = data['url']
-    #         img = data['imgUrl']
-    #         insert(title, url, img, src)
-    #         if i % 10 ==0:
-    #             print(i)
-    #     except:
-    #         print('error')
+            data=pickle.load(output)
+            src = str(data['video'])
+            title = data['name']
+            url = data['url']
+            img = data['imgUrl']
+            insert(title, url, img, src)
+            if i % 10 ==0:
+                print(i)
+        except:
+            print('error')
     
 
-    select('海贼')
+    #select('海贼')
 
