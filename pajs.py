@@ -12,14 +12,17 @@ class paJs:
         
 
         self.url = "http://www.imomoe.io/playdata/2/7426.js?1393.1"
-        self.r = requests.get(self.url)
 
         self.list = []
+        self.text = ''
 
 
     def start(self):
 
+        self.r = requests.get(self.url)
+
         txt = ''+self.r.text
+        self.text = txt
         arr = txt.split('\'')
         count =0
         for index,val in enumerate(arr):

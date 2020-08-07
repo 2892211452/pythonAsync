@@ -6,13 +6,14 @@ sys.setrecursionlimit(10000)
 
 
 if __name__=="__main__":
-    output = open(FileDir+'/dmList/data4.pkl', 'rb')
+    output = open(FileDir+'/dm/data1791.pkl', 'rb')
 
 
     data=pickle.load(output)
 
     print(len(data))
-    print(data[0])
+    for i in data:
+        print(data[i])
 
 
 

@@ -13,7 +13,7 @@ sys.setrecursionlimit(10000)
 from bs4 import BeautifulSoup
 
 ans = []
-num = 103
+num = 1761
 from var import *
 
 
@@ -50,6 +50,7 @@ async def SingleDM(DM):
                     pJS.url = url
                     pJS.start()
                     DM['video'] = pJS.list
+                    DM['text'] = pJS.text
             #print(DM)
             global num
             print(num)
@@ -175,13 +176,13 @@ if __name__=="__main__":
                 task.append(t)
             tasks.append(task)
 
-            t = ProTask(tasks)
+            t = ProDmTask(tasks)
 
 
     # 第二步 进行单个动漫解析
     if step ==2:
         datas = []
-        for i in range(9, 608):
+        for i in range(120, 609):
             try:
                 output = open(FileDir+'/dmList/data'+str(i)+'.pkl', 'rb')
                 data=pickle.load(output)
